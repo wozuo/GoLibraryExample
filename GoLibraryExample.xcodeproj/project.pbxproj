@@ -13,6 +13,9 @@
 		49F60A412386DBD100726802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F60A3F2386DBD100726802 /* Main.storyboard */; };
 		49F60A432386DBD300726802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F60A422386DBD300726802 /* Assets.xcassets */; };
 		49F60A462386DBD300726802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F60A442386DBD300726802 /* LaunchScreen.storyboard */; };
+		49F60A632387066700726802 /* libhtmlescaper_iossim_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F60A5D2387066700726802 /* libhtmlescaper_iossim_arm64.a */; };
+		49F60A642387066700726802 /* libhtmlescaper_macos_amd64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F60A602387066700726802 /* libhtmlescaper_macos_amd64.a */; };
+		49F60A652387066700726802 /* libhtmlescaper_ios_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F60A622387066700726802 /* libhtmlescaper_ios_arm64.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,13 @@
 		49F60A422386DBD300726802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F60A452386DBD300726802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49F60A472386DBD300726802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F60A502386E47900726802 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		49F60A5D2387066700726802 /* libhtmlescaper_iossim_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhtmlescaper_iossim_arm64.a; sourceTree = "<group>"; };
+		49F60A5E2387066700726802 /* libhtmlescaper_ios_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libhtmlescaper_ios_arm64.h; sourceTree = "<group>"; };
+		49F60A5F2387066700726802 /* libhtmlescaper_iossim_arm64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libhtmlescaper_iossim_arm64.h; sourceTree = "<group>"; };
+		49F60A602387066700726802 /* libhtmlescaper_macos_amd64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhtmlescaper_macos_amd64.a; sourceTree = "<group>"; };
+		49F60A612387066700726802 /* libhtmlescaper_macos_amd64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libhtmlescaper_macos_amd64.h; sourceTree = "<group>"; };
+		49F60A622387066700726802 /* libhtmlescaper_ios_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhtmlescaper_ios_arm64.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F60A632387066700726802 /* libhtmlescaper_iossim_arm64.a in Frameworks */,
+				49F60A642387066700726802 /* libhtmlescaper_macos_amd64.a in Frameworks */,
+				49F60A652387066700726802 /* libhtmlescaper_ios_arm64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,7 @@
 				49F60A392386DBD100726802 /* AppDelegate.swift */,
 				49F60A3B2386DBD100726802 /* SceneDelegate.swift */,
 				49F60A3D2386DBD100726802 /* ViewController.swift */,
+				49F60A4D2386E47900726802 /* Frameworks */,
 				49F60A3F2386DBD100726802 /* Main.storyboard */,
 				49F60A422386DBD300726802 /* Assets.xcassets */,
 				49F60A442386DBD300726802 /* LaunchScreen.storyboard */,
@@ -66,6 +80,20 @@
 			);
 			path = GoLibraryExample;
 			sourceTree = "<group>";
+		};
+		49F60A4D2386E47900726802 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49F60A622387066700726802 /* libhtmlescaper_ios_arm64.a */,
+				49F60A5E2387066700726802 /* libhtmlescaper_ios_arm64.h */,
+				49F60A5D2387066700726802 /* libhtmlescaper_iossim_arm64.a */,
+				49F60A5F2387066700726802 /* libhtmlescaper_iossim_arm64.h */,
+				49F60A602387066700726802 /* libhtmlescaper_macos_amd64.a */,
+				49F60A612387066700726802 /* libhtmlescaper_macos_amd64.h */,
+				49F60A502386E47900726802 /* module.modulemap */,
+			);
+			path = Frameworks;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -222,6 +250,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/**";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -275,6 +304,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/**";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -286,10 +316,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 964HJ5SV2F;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GoLibraryExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marctarnutzer.GoLibraryExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,10 +339,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 964HJ5SV2F;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GoLibraryExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marctarnutzer.GoLibraryExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

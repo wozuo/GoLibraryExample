@@ -1,0 +1,7 @@
+module HTMLEscaper {
+    header "libhtmlescaper_ios_arm64.h"
+    header "libhtmlescaper_iossim_arm64.h"
+    header "libhtmlescaper_macos_amd64.h"
+    link "htmlescaper"
+    export *
+}
